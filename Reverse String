@@ -1,0 +1,51 @@
+
+// There are 3 ways to reverse a String 1.StringBuffer 2. using Loop 3.recursion.
+
+import java.io.*;
+
+public class StringRev
+{
+	public static void main(String [] args)
+	{
+		String example = "Hello World";
+
+
+		System.out.println("length of string: " + example.length());
+			
+		/*
+		// 1. Using StringBuffer,
+
+			StringBuffer sb = new StringBuffer(example);
+
+			sb.reverse();
+
+			example = new String(sb);
+			System.out.println(example);
+		
+
+		// 2. using Loop,
+
+			for (int i = example.length() -1 ;i>=0 ;i-- ) 
+			{
+				System.out.print(example.charAt(i));	
+			}
+		
+
+		// 3.Using Recursion,
+
+			String reversed = reverseString(example);
+
+			System.out.print("Reversed String: " + reversed);
+
+	}
+
+		    static String reverseString(String str)
+			{
+			   if (str.length()==1 || str.isEmpty()) 
+				{
+					return str;	
+				}
+			    return reverseString(str.substring(1)) + str.charAt(0);
+			}
+
+}
